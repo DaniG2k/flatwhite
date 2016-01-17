@@ -2,7 +2,13 @@
 
 header {
   h1 {
-    color:$blue;
+    a {
+      color:$blue;
+      text-decoration:none;
+      &:hover {
+        text-decoration:underline;
+      }
+    }
   }
 }
 
@@ -43,6 +49,7 @@ footer {
 // ---- END HELPER CLASSES ---- //
 
 h1,h2,h3,h4,h5,h6 {
+  color:$blue;
   font-family:$header-font-family;
   -webkit-font-smoothing:antialiased;
   -moz-font-smoothing:antialiased;

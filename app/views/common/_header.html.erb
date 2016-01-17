@@ -2,16 +2,16 @@
   <div class="container">
     <div class="row">
       <div class="span12 center">
-        <%= content_tag :h1, t('website') %>
+        <h1><%= link_to t('website'), root_path %></h1>
       </div>
     </div>
     <div class="row">
       <div class="span12 center">
         <nav>
           <ul>
-            <li><%= link_to 'Home', root_path %></li>
-            <li><%= link_to 'Section1', '#' %></li>
+            <li><%= link_to 'Section1', '#'  %></li>
             <li><%= link_to 'Section2', '#' %></li>
+            <li><%= link_to 'Section3', '#' %></li>
             <li><%= link_to 'Contact', '#' %></li>
           </ul>
         </nav>
