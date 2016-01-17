@@ -11,7 +11,7 @@
 
   <tbody>
     <% @posts.each do |post| %>
-      <%= link_to post.title, post_path(post) %>
+      <%= link_to post.title, post_path(post) %> (<%= post.created_at.strftime('%A %B %e, %Y') %>)
       <tr>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
