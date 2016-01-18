@@ -21,3 +21,8 @@
 
 en:
   website: "Flatwhite"
+  posts:
+    new:
+      title: 'New Post'
+    edit:
+      title: "Editing Post"
