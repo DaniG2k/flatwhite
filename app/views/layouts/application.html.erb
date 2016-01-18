@@ -11,13 +11,14 @@
 <%= render 'common/header' %>
 <div class="container">
 	<div class ="row">
-		<div class="span8">
-			<%= yield %>
-		</div>
-		<div class="span4">
-			<%= render 'common/sidebar' %>
-		</div>
-	</div>
+      <div class="span8">
+        <%= render 'common/alerts' %>
+        <%= yield %>
+      </div>
+      <div class="span4">
+        <%= render 'common/sidebar' %>
+      </div>
+    </div>
 </div>
 <%= render 'common/footer' %>
 </body>

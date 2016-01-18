@@ -1,0 +1,5 @@
+<% if flash[:notice] %>
+  <%= content_tag :p, notice, class: "alert alert-warning" %>
+<% elsif flash[:alert] %>
+  <%= content_tag :p, alert, class: "alert alert-danger" %>
+<% end %>
