@@ -14,6 +14,6 @@ RSpec.feature "AddNewPosts", type: :feature do
     click_link_or_button "Create Post"
 
     expect(Post.count).to eq(1)
-    expect(Post.first.name).to eq("Post title")
+    expect(Post.first.title).to eq("Post title")
   end
 end

@@ -5,13 +5,14 @@ RSpec.describe PostsController, :type => :controller do
     before :each do
       login_with nil
     end
+
     it "should let any user see all the posts" do
       get :index
       expect(response).to render_template(:index)
     end
 
     it "should let an authenticated user see all the posts" do
-      login_with create(:user)
+      login_with :user
       get :index
       expect(response).to render_template(:index)
     end
