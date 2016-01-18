@@ -11,8 +11,10 @@
     </div>
   <% end %>
 
-  <%= f.label :title %>:
-  <%= f.text_field :title %><br />
+  <div class="form-group">
+    <%= f.label :title %>:
+    <%= f.text_field :title, :class => 'form-control' %><br />
+  </div>
 
   <%= f.label :body %>:
   <%= f.cktext_area :body, :cols => 40 %>
