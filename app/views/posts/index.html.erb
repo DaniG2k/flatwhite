@@ -2,7 +2,9 @@
 
 <% @posts.each do |post| %>
   <div class="row">
-    <div class="span12"><%= link_to post.title, post_path(post) %> (<%= post.created_at.strftime('%A %B %e, %Y') %>)</div>
+    <div class="span12">
+      <h2><%= link_to post.title, post_path(post) %> <small>(<%= post.created_at.strftime('%A %B %e, %Y') %>)</small></h2>
+    </div>
   </div>
   <div class="row">
     <div class="span12"><%= preview(post) %></div>
