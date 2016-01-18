@@ -16,6 +16,9 @@ RSpec.describe Post, :type => :model do
     it 'requires a title' do
       @post2.title = ''
     end
+    it 'requires a unique title' do
+      @post2.title = 'Some interesting title'
+    end
     it 'requires a body' do
       @post2.body = ''
     end
