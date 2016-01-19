@@ -12,7 +12,7 @@ RSpec.feature "AddNewPosts", type: :feature do
       fill_in "post_body", with: "This is the blog entry's body"
     end
 
-    click_link_or_button "Create Post"
+    click_link_or_button "Submit"
 
     expect(Post.count).to eq(1)
     expect(Post.first.title).to eq("Post title")
