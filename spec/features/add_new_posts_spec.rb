@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature "AddNewPosts", type: :feature do
   it 'should require the user log in before adding a post' do
-    login_as :user, :scope => :user
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
     
     visit new_post_path
 
