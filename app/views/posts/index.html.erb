@@ -4,10 +4,9 @@
   <div class="row">
     <div class="span12">
       <h2><%= link_to post.title, post_path(post) %> <small>(<%= post.created_at.strftime('%A %B %e, %Y') %>)</small></h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="span12">
+      <%= link_to post_path(post) do %>
+        <%= image_tag post.post_image_url(:front_page_hero), :class => 'img-thumbnail' %>
+      <% end %>
     <%= content_tag :p, preview(post) %>
     </div>
   </div>
@@ -20,5 +19,4 @@
       </div>
     </div>
   <% end %>
-
 <% end %>
