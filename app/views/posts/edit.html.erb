@@ -2,6 +2,6 @@
 <h1>Editing Post</h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+<br>
+<%= link_to fa_icon('eye', text: 'Show'), @post, :class => 'btn btn-success' %>
+<%= link_to fa_icon('arrow-left', text: 'Back'), posts_path, :class => 'btn btn-primary' %>

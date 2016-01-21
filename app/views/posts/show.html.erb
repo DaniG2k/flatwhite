@@ -13,6 +13,6 @@
 </div>
 
 <% if user_signed_in? %>
-	<%= link_to 'Edit', edit_post_path(@post), :class => 'btn btn-warning' %>
+	<%= link_to fa_icon('edit', text: 'Edit'), edit_post_path(@post), :class => 'btn btn-warning' %>
 <% end %>
-<%= link_to 'Back', posts_path, :class => 'btn btn-primary' %>
+<%= link_to fa_icon('arrow-left', text: 'Back'), posts_path, :class => 'btn btn-primary' %>

@@ -8,15 +8,15 @@
   </div>
   <div class="row">
     <div class="span12">
-    <%= preview(post) %>
+    <%= content_tag :p, preview(post) %>
     </div>
   </div>
 
   <% if user_signed_in? %>
     <div class="row">
       <div class="span12">
-        <%= link_to 'Edit', edit_post_path(post), :class => 'btn btn-warning' %>
-        <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure you would like to delete this blog post?' }, :class => 'btn btn-danger' %>
+        <%= link_to fa_icon('edit', text: 'Edit'), edit_post_path(post), :class => 'btn btn-warning' %>
+        <%= link_to fa_icon('trash', text: 'Delete'), post, method: :delete, data: { confirm: 'Are you sure you would like to delete this blog post?' }, :class => 'btn btn-danger' %>
       </div>
     </div>
   <% end %>
