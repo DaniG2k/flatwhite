@@ -1,0 +1,43 @@
+@import 'variables';
+img {
+  vertical-align: middle;
+}
+.img-thumbnail {
+  margin-bottom:5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: inline-block;
+  height: auto;
+  line-height: 1.42857;
+  max-width: 100%;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+  &:hover{
+    border-color:#66afe9;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 5px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+  }
+}
+
+figure {
+  figcaption {
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    font-family:$body-font-family;
+    padding:$figure-padding 0;
+    color:#A9A9A9;
+  }
+  &.rightfloated {
+    float:right;
+    padding-left:$figure-padding;
+  }
+  &.leftfloated {
+    float:left;
+    padding-right:$figure-padding;
+  }
+  img {
+    padding-bottom:$figure-padding;
+    width:100%;
+    height:auto;
+  }
+}

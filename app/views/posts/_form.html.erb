@@ -13,8 +13,25 @@
 
   <div class="form-group">
     <%= f.label :title %>:
-    <%= f.text_field :title, :class => 'form-control' %><br />
+    <%= f.text_field :title, :class => 'form-control' %>
+    <br />
   </div>
+  <div class="form-group">
+    <%= f.label "Lead image" %>
+    <%= image_tag(@post.post_image_url) if @post.post_image? %>
+    <%= f.file_field :post_image %>
+    <%= f.hidden_field :post_image_cache %>
+  </div>
+  <% if @post.post_image? %>
+    <div class="form-group">
+      <label><%= f.check_box :remove_post_image %> Remove lead image?</label>
+    </div>
+    <div class="form-group">
+      <%= f.label :caption %>
+      <%= f.text_field :caption, :class => "form-control" %>
+      <br />
+    </div>
+  <% end %>
 
   <%= f.label :body %>:
   <%= f.cktext_area :body, :cols => 40 %>
