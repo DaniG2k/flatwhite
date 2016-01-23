@@ -1,6 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, :type => :controller do
+  describe 'finding posts' do
+    it 'handles a missing project correctly' do
+      get :show, id: 'not-here'
+
+      expect(response).to redirect_to(posts_path)
+      
+      message = 'The post you were looking for could not be found.'
+      expect(flash[:alert]).to eq message
+    end
+  end
   describe "anonymous user" do
     before :each do
       login_with nil
