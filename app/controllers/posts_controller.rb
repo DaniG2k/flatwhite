@@ -1,11 +1,14 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :about]
 
   # GET /posts
   # GET /posts.json
   def index
     @posts = Post.all
+  end
+
+  def about
   end
 
   # GET /posts/1
@@ -60,9 +63,6 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
-  end
-
-  def about
   end
 
   private
