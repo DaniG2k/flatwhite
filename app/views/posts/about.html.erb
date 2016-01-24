@@ -1,0 +1,10 @@
+<%= title(t('.title')) %>
+<div class="row">
+	<div class="span12">
+		<%= content_tag :h2, t('.title') %>
+	</div>
+</div>
+<div class="row">
+  <div class="span12"><%= t('.content') %></div>
+</div>
+<%= link_to fa_icon('arrow-left', text: 'Back'), posts_path, :class => 'btn btn-primary' %>

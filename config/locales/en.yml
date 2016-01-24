@@ -26,3 +26,6 @@ en:
       title: 'New Post'
     edit:
       title: "Editing Post"
+    about:
+      title: "About"
+      content: 
