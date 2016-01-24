@@ -1,9 +1,3 @@
-<%= content_for :ckeditor_basepath do %>
-<script type="text/javascript">
-  var CKEDITOR_BASEPATH = '<%= "#{Rails.application.config.assets.prefix}/ckeditor/" %>';
-</script>
-<% end %>
-
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div class="alert alert-danger" id="error_explanation">
