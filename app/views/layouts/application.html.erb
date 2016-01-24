@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= content_tag :title, (content_for?(:title) ? yield(:title) : t(:website)) %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= yield(:ckeditor_basepath) if content_for?(:ckeditor_basepath) %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
