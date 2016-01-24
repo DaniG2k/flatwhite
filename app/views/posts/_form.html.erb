@@ -1,6 +1,6 @@
 <%= content_for :ckeditor_basepath do %>
 <script type="text/javascript">
- var CKEDITOR_BASEPATH = '/assets/ckeditor/';
+  var CKEDITOR_BASEPATH = '<%= "#{Rails.application.config.assets.prefix}/ckeditor/" %>';
 </script>
 <% end %>
 
