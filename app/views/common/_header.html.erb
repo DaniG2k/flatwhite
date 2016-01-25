@@ -9,8 +9,8 @@
       <div class="span12 center">
         <nav>
           <ul>
-            <li><%= link_to 'About', about_path  %></li>
-            <li><%= link_to 'Section2', '#' %></li>
+            <li><%= link_to fa_icon('hand-peace-o', text: 'About'), about_path  %></li>
+            <li><%= link_to fa_icon('globe', text: "London"), '#' %></li>
             <li><%= link_to 'Section3', '#' %></li>
             <li><%= link_to fa_icon('paper-plane', text: 'Contact'), '#' %></li>
             <% if user_signed_in? %>
