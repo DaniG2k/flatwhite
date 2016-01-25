@@ -49,6 +49,11 @@ body {
   }
 }
 
+.content-box p {
+  margin-bottom:1em;
+  text-indent:2em;
+}
+
 blockquote {
   font-style:italic;
   background:$bg-color;
